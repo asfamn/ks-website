@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kilang Sublimation - Perkhidmatan Percetakan Profesional</title>
+    <title>Kilang Sublimation - Professional Printing Services</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
@@ -25,119 +25,10 @@
         }
 
         /* Hero Section */
-        #hero { 
-            padding: 80px 0; 
-            position: relative;
-            overflow: hidden;
-        }
-        #hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-        }
-        #hero h1 { 
-            font-size: 3rem; 
-            font-weight: 700;
-            animation: fadeInUp 1s ease-out;
-        }
-        #hero p { 
-            font-size: 1.1rem;
-            animation: fadeInUp 1.2s ease-out;
-        }
-        .hero-img-container {
-            position: relative;
-            animation: fadeInRight 1.5s ease-out;
-            margin-top: 0;
-            align-self: center;
-        }
-        .hero-img {
-            max-height: 500px;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            transition: all 0.5s ease;
-            border: 5px solid rgba(255, 255, 255, 0.2);
-            position: relative;
-            z-index: 1;
-            display: block;
-        }
-        .hero-img:hover {
-            transform: scale(1.05) translateY(-10px);
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
-            border-color: rgba(244, 208, 63, 0.5);
-        }
-        .hero-img-container::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(135deg, rgba(244, 208, 63, 0.3), rgba(164, 0, 255, 0.3));
-            border-radius: 25px;
-            z-index: 0;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            filter: blur(20px);
-        }
-        .hero-img-container:hover::before {
-            opacity: 1;
-        }
-        .hero-img-container::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(
-                to bottom,
-                rgba(76, 102, 255, 0.3) 0%,
-                transparent 20%,
-                transparent 80%,
-                rgba(164, 0, 255, 0.3) 100%
-            ),
-            linear-gradient(
-                to right,
-                rgba(76, 102, 255, 0.2) 0%,
-                transparent 30%,
-                transparent 70%,
-                rgba(164, 0, 255, 0.2) 100%
-            );
-            border-radius: 20px;
-            z-index: 2;
-            pointer-events: none;
-            mix-blend-mode: overlay;
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        .hero-buttons {
-            animation: fadeInUp 1.4s ease-out;
-        }
+        #hero { padding: 80px 0; }
+        #hero h1 { font-size: 3rem; font-weight: 700; }
+        #hero p { font-size: 1.1rem; }
+        .hero-img { max-height: 400px; object-fit: cover; border-radius: 8px; }
 
         /* Services Section */
         .service-card {
@@ -152,7 +43,6 @@
         .card-shirt { background-color: #f7f9ff; }
         .card-banner { background-color: #f5f0ff; }
         .card-lanyards { background-color: #f0fff5; }
-        .card-dtf { background-color: #fff5f0; }
         .service-icon { font-size: 2rem; margin-bottom: 10px; }
 
         /* Gallery Section */
@@ -237,87 +127,15 @@
         }
         .social-icon:hover { color: #f4d03f; }
 
-        /* Floating Agent Button */
-        .floating-agent-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1000;
-            background: linear-gradient(135deg, #f4d03f 0%, #f9a825 100%);
-            color: #212529;
-            border: none;
-            border-radius: 50px;
-            padding: 15px 25px;
-            font-weight: bold;
-            font-size: 1rem;
-            box-shadow: 0 4px 15px rgba(244, 208, 63, 0.4);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            animation: floatAnimation 3s ease-in-out infinite, pulseAnimation 2s ease-in-out infinite;
-            text-decoration: none;
-        }
-        .floating-agent-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 6px 20px rgba(244, 208, 63, 0.6);
-        }
-        .floating-agent-btn i {
-            font-size: 1.2rem;
-        }
-        @keyframes floatAnimation {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-        @keyframes pulseAnimation {
-            0%, 100% {
-                box-shadow: 0 4px 15px rgba(244, 208, 63, 0.4);
-            }
-            50% {
-                box-shadow: 0 4px 25px rgba(244, 208, 63, 0.7);
-            }
-        }
-        @media (max-width: 575.98px) {
-            .floating-agent-btn {
-                bottom: 20px;
-                right: 20px;
-                padding: 12px 20px;
-                font-size: 0.9rem;
-            }
-            .floating-agent-btn span {
-                display: none;
-            }
-            .floating-agent-btn::after {
-                content: "Agent?";
-                display: inline;
-            }
-        }
-
         /* Media Queries for Responsiveness */
         @media (max-width: 991.98px) {
             #hero h1 { font-size: 2.5rem; }
-            .hero-img { max-height: 400px; }
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
         @media (max-width: 575.98px) {
             #hero h1 { font-size: 2rem; }
-            .hero-img { 
-                max-height: 300px;
-                border-radius: 15px;
-            }
-            .hero-img-container::before {
-                top: -5px;
-                left: -5px;
-                right: -5px;
-                bottom: -5px;
-            }
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
@@ -338,22 +156,22 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#hero">Laman Utama</a>
+                        <a class="nav-link" href="#hero">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Perkhidmatan</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Galeri</a>
+                        <a class="nav-link" href="#gallery">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">Tentang Kami</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Hubungi</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
-                <a href="#contact" class="btn btn-primary ms-lg-3" data-bs-toggle="modal" data-bs-target="#getQuoteModal">Dapatkan Sebut Harga</a>
+                <a href="#contact" class="btn btn-primary ms-lg-3" data-bs-toggle="modal" data-bs-target="#getQuoteModal">Get Quote</a>
             </div>
         </div>
     </nav>
@@ -361,18 +179,14 @@
     <section id="hero" class="bg-gradient-hero pt-5 pt-lg-0">
         <div class="container">
             <div class="row align-items-center py-5">
-                <div class="col-lg-6 order-lg-1 d-flex flex-column justify-content-center">
-                    <h1 class="mt-5 mt-lg-0">Perkhidmatan <span class="text-yellow">Percetakan Sublimation</span> Profesional</h1>
-                    <p class="mt-3 mb-4">Ubah idea anda menjadi cetakan yang menakjubkan. Kami pakar dalam baju kustom, sepanduk, dan lanyard dengan teknologi sublimation berkualiti premium.</p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-warning btn-lg me-3 mb-2">Mulakan Pesanan Anda</a>
-                        <a href="#gallery" class="btn btn-outline-light btn-lg mb-2">Lihat Portfolio</a>
-                    </div>
+                <div class="col-lg-6 order-lg-1">
+                    <h1 class="mt-5">Professional <span class="text-yellow">Sublimation Printing</span> Services</h1>
+                    <p class="mt-3 mb-4">Transform your ideas into stunning prints. We specialize in custom shirts, banners, and lanyards with premium quality sublimation technology.</p>
+                    <a href="#contact" class="btn btn-warning btn-lg me-3 mb-2">Start Your Order</a>
+                    <a href="#gallery" class="btn btn-outline-light btn-lg mb-2">View Portfolio</a>
                 </div>
-                <div class="col-lg-6 order-lg-2 mt-4 mt-lg-0 text-center d-flex align-items-center">
-                    <div class="hero-img-container w-100">
-                        <img src="images/hero-building.jpg" alt="Kilang Sublimation Building" class="img-fluid hero-img">
-                    </div>
+                <div class="col-lg-6 order-lg-2 mt-4 mt-lg-0 text-center">
+                    <img src="https://via.placeholder.com/600x400.png?text=Placeholder+Image+of+Printed+Shirts" alt="Sublimation Printed Shirts" class="img-fluid hero-img shadow-lg">
                 </div>
             </div>
         </div>
@@ -380,62 +194,48 @@
 
     <section id="services" class="py-5">
         <div class="container text-center">
-            <h2 class="display-5 fw-bold mb-1">Perkhidmatan Premium Kami</h2>
-            <p class="mb-5 text-muted">Kami menyediakan penyelesaian percetakan berkualiti tinggi untuk semua keperluan kustom anda.</p>
+            <h2 class="display-5 fw-bold mb-1">Our Premium Services</h2>
+            <p class="mb-5 text-muted">We deliver exceptional quality printing solutions for all your custom needs.</p>
 
             <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-4">
                     <div class="service-card card-shirt shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=400&fit=crop" class="img-fluid rounded mb-3" alt="Custom Shirt Printing">
+                        <img src="https://via.placeholder.com/400x250.png?text=Image+of+Custom+Shirts" class="img-fluid rounded mb-3" alt="Custom Shirt Printing">
                         <div class="service-icon text-primary"><i class="bi bi-t-shirt-fill"></i></div>
-                        <h3 class="h5 fw-bold">Percetakan Baju Kustom</h3>
-                        <p class="text-muted">Percetakan sublimation berkualiti tinggi pada pelbagai jenis baju. Sesuai untuk acara, pasukan, dan reka bentuk peribadi.</p>
+                        <h3 class="h5 fw-bold">Custom Shirt Printing</h3>
+                        <p class="text-muted">High-quality sublimation printing on various shirt types. Perfect for events, teams, and personal designs.</p>
                         <ul class="list-unstyled text-start small">
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Kualiti fabrik premium</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Warna terang dan tahan lama</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Semua saiz tersedia</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Premium fabric quality</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Vibrant, long-lasting colors</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>All sizes available</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-4">
                     <div class="service-card card-banner shadow-sm">
-                         <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" class="img-fluid rounded mb-3" alt="Banner Printing">
+                         <img src="https://via.placeholder.com/400x250.png?text=Image+of+Banner+Printing" class="img-fluid rounded mb-3" alt="Banner Printing">
                         <div class="service-icon text-secondary"><i class="bi bi-flag-fill"></i></div>
-                        <h3 class="h5 fw-bold">Percetakan Sepanduk</h3>
-                        <p class="text-muted">Sepanduk menarik untuk acara, pengiklanan, dan promosi. Bahan tahan cuaca dan tahan lasak.</p>
+                        <h3 class="h5 fw-bold">Banner Printing</h3>
+                        <p class="text-muted">Eye-catching banners for events, advertising, and promotions. Weather-resistant and durable materials.</p>
                         <ul class="list-unstyled text-start small">
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Percetakan format besar</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Tahan cuaca</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Saiz kustom</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Large format printing</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Weather resistant</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Custom sizes</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-4">
                     <div class="service-card card-lanyards shadow-sm">
-                         <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=400&fit=crop" class="img-fluid rounded mb-3" alt="Custom Lanyards">
+                         <img src="https://via.placeholder.com/400x250.png?text=Image+of+Custom+Lanyards" class="img-fluid rounded mb-3" alt="Custom Lanyards">
                         <div class="service-icon text-success"><i class="bi bi-person-badge-fill"></i></div>
-                        <h3 class="h5 fw-bold">Lanyard Kustom</h3>
-                        <p class="text-muted">Lanyard profesional untuk acara korporat, persidangan, dan tujuan pengenalan.</p>
+                        <h3 class="h5 fw-bold">Custom Lanyards</h3>
+                        <p class="text-muted">Professional lanyards for corporate events, conferences, and identification purposes.</p>
                         <ul class="list-unstyled text-start small">
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Pengebrandan korporat</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Bahan selesa</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Pesanan pukal tersedia</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card card-dtf shadow-sm">
-                         <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=600&h=400&fit=crop" class="img-fluid rounded mb-3" alt="DTF Printing">
-                        <div class="service-icon text-warning"><i class="bi bi-printer-fill"></i></div>
-                        <h3 class="h5 fw-bold">Perkhidmatan DTF</h3>
-                        <p class="text-muted">Percetakan Direct to Film (DTF) berkualiti tinggi untuk pelbagai jenis fabrik. Teknologi terkini untuk hasil yang menakjubkan.</p>
-                        <ul class="list-unstyled text-start small">
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Boleh digunakan pada pelbagai fabrik</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Cetakan tahan lama dan fleksibel</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Kualiti cetakan yang tajam</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Corporate branding</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Comfortable materials</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Bulk orders available</li>
                         </ul>
                     </div>
                 </div>
@@ -445,18 +245,18 @@
 
     <section id="gallery" class="py-5 bg-light">
         <div class="container text-center">
-            <h2 class="display-5 fw-bold mb-1">Galeri Karya Kami</h2>
-            <p class="mb-5 text-muted">Lihat kualiti dan kreativiti dalam projek terkini kami.</p>
+            <h2 class="display-5 fw-bold mb-1">Our Work Gallery</h2>
+            <p class="mb-5 text-muted">See the quality and creativity in our recent projects.</p>
             
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&h=800&fit=crop" alt="Custom Printed T-Shirts"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=800&h=800&fit=crop" alt="Sublimation Printing Process"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=800&fit=crop" alt="Custom Banner Printing"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&h=800&fit=crop" alt="Custom Lanyards"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800&h=800&fit=crop" alt="DTF Printing Technology"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&h=800&fit=crop" alt="Printed Textile Products"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?w=800&h=800&fit=crop" alt="Custom Design Printing"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?w=800&h=800&fit=crop" alt="Professional Printing Services"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/300x300.png?text=Gallery+Item+1" alt="Gallery 1"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/300x300.png?text=Gallery+Item+2" alt="Gallery 2"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/300x300.png?text=Gallery+Item+3" alt="Gallery 3"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/300x300.png?text=Gallery+Item+4" alt="Gallery 4"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/300x300.png?text=Gallery+Item+5" alt="Gallery 5"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/300x300.png?text=Gallery+Item+6" alt="Gallery 6"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/300x300.png?text=Gallery+Item+7" alt="Gallery 7"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/300x300.png?text=Gallery+Item+8" alt="Gallery 8"></div>
             </div>
         </div>
     </section>
@@ -465,16 +265,16 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h2 class="display-5 fw-bold mb-4">Mengapa Pilih Kilang Sublimation?</h2>
-                    <p class="mb-4">Dengan pengalaman bertahun-tahun dalam percetakan sublimation, kami menyediakan kualiti dan perkhidmatan yang luar biasa melebihi jangkaan.</p>
+                    <h2 class="display-5 fw-bold mb-4">Why Choose Kilang Sublimation?</h2>
+                    <p class="mb-4">With years of experience in sublimation printing, we deliver exceptional quality and service that exceeds expectations.</p>
 
                     <div class="d-flex why-point">
                         <div class="flex-shrink-0 why-icon me-3">
                             <i class="bi bi-patch-check-fill"></i>
                         </div>
                         <div>
-                            <h4 class="h6 fw-bold">Kualiti Premium</h4>
-                            <p class="text-muted small mb-0">Teknologi sublimation canggih memastikan cetakan yang terang dan tahan lama.</p>
+                            <h4 class="h6 fw-bold">Premium Quality</h4>
+                            <p class="text-muted small mb-0">State-of-the-art sublimation technology ensures vibrant, long-lasting prints.</p>
                         </div>
                     </div>
 
@@ -483,8 +283,8 @@
                             <i class="bi bi-clock-history"></i>
                         </div>
                         <div>
-                            <h4 class="h6 fw-bold">Penghantaran Pantas</h4>
-                            <p class="text-muted small mb-0">Pemprosesan dan penghantaran pantas tanpa menjejaskan kualiti.</p>
+                            <h4 class="h6 fw-bold">Fast Turnaround</h4>
+                            <p class="text-muted small mb-0">Quick processing and delivery without compromising on quality.</p>
                         </div>
                     </div>
 
@@ -493,14 +293,14 @@
                             <i class="bi bi-palette-fill"></i>
                         </div>
                         <div>
-                            <h4 class="h6 fw-bold">Reka Bentuk Kustom</h4>
-                            <p class="text-muted small mb-0">Wujudkan visi kreatif anda dengan perkhidmatan reka bentuk kustom kami.</p>
+                            <h4 class="h6 fw-bold">Custom Designs</h4>
+                            <p class="text-muted small mb-0">Bring your creative vision to life with our custom design services.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 mt-4 mt-lg-0 text-center">
-                    <img src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=400&fit=crop" alt="Workers Sublimation Printing" class="img-fluid sublimation-img shadow-lg">
+                    <img src="https://via.placeholder.com/500x350.png?text=Image+of+Workers+Sublimation+Printing" alt="Workers Sublimation Printing" class="img-fluid sublimation-img shadow-lg">
                 </div>
             </div>
         </div>
@@ -509,20 +309,20 @@
     <section id="contact">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold">Hubungi Kami</h2>
-                <p class="lead">Bersedia untuk memulakan projek percetakan anda? Hubungi kami hari ini!</p>
+                <h2 class="display-5 fw-bold">Get In Touch</h2>
+                <p class="lead">Ready to start your printing project? Contact us today!</p>
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="row">
                         <div class="col-lg-6 mb-4 mb-lg-0">
-                            <h3 class="h4 fw-bold mb-4">Maklumat Hubungan</h3>
+                            <h3 class="h4 fw-bold mb-4">Contact Information</h3>
                             
                             <div class="d-flex align-items-center contact-info-block">
                                 <div class="contact-icon me-3"><i class="bi bi-geo-alt-fill"></i></div>
                                 <div>
-                                    <small class="d-block">Alamat</small>
+                                    <small class="d-block">Address</small>
                                     <p class="mb-0">LOT 2, INKUBATOR INDUSTRI DESA(IID), PEKAN AJIL 21800 AJIL TERENGGANU</p>
                                 </div>
                             </div>
@@ -530,15 +330,15 @@
                             <div class="d-flex align-items-center contact-info-block">
                                 <div class="contact-icon me-3"><i class="bi bi-telephone-fill"></i></div>
                                 <div>
-                                    <small class="d-block">Telefon</small>
-                                    <p class="mb-0">+60 19-280 4490 / +60 19-243 4490</p>
+                                    <small class="d-block">Phone</small>
+                                    <p class="mb-0"> +60 19-280 4490 / +0 19-243 4490</p>
                                 </div>
                             </div>
 
                             <div class="d-flex align-items-center contact-info-block">
                                 <div class="contact-icon me-3"><i class="bi bi-envelope-fill"></i></div>
                                 <div>
-                                    <small class="d-block">E-mel</small>
+                                    <small class="d-block">Email</small>
                                     <p class="mb-0">Admin@kilangsublimation.com.my</p>
                                 </div>
                             </div>
@@ -546,36 +346,34 @@
                             <div class="d-flex align-items-center contact-info-block">
                                 <div class="contact-icon me-3"><i class="bi bi-clock-fill"></i></div>
                                 <div>
-                                    <small class="d-block">Waktu Operasi</small>
-                                    <p class="mb-0">8:30PG - 5:00PTG</p>
+                                    <small class="d-block">Business Hours</small>
+                                    <p class="mb-0">Sun-Thu: 8:30AM-5:00PM<br>Sat: 8:30AM-5:00PM</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-6">
-                            <h3 class="h4 fw-bold mb-4">Hantar Mesej kepada Kami</h3>
-                            <form id="contactForm">
+                            <h3 class="h4 fw-bold mb-4">Send us a Message</h3>
+                            <form>
                                 <div class="mb-3">
-                                    <input type="text" id="contactName" name="name" class="form-control form-control-lg" placeholder="Nama Anda" required>
+                                    <input type="text" class="form-control form-control-lg" placeholder="Your Name" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="email" id="contactEmail" name="email" class="form-control form-control-lg" placeholder="E-mel Anda" required>
+                                    <input type="email" class="form-control form-control-lg" placeholder="Your Email" required>
                                 </div>
                                 <div class="mb-3">
-                                    <select id="contactService" name="service" class="form-select form-select-lg" required>
-                                        <option value="" disabled selected>Pilih Perkhidmatan</option>
-                                        <option value="shirt">Percetakan Baju Kustom</option>
-                                        <option value="banner">Percetakan Sepanduk</option>
-                                        <option value="lanyard">Lanyard Kustom</option>
-                                        <option value="dtf">Perkhidmatan DTF</option>
-                                        <option value="other">Pertanyaan Lain</option>
+                                    <select class="form-select form-select-lg" required>
+                                        <option value="" disabled selected>Select Service</option>
+                                        <option value="shirt">Custom Shirt Printing</option>
+                                        <option value="banner">Banner Printing</option>
+                                        <option value="lanyard">Custom Lanyards</option>
+                                        <option value="other">Other Inquiry</option>
                                     </select>
                                 </div>
                                 <div class="mb-4">
-                                    <textarea id="contactMessage" name="message" class="form-control form-control-lg" rows="4" placeholder="Mesej Anda" required></textarea>
+                                    <textarea class="form-control form-control-lg" rows="4" placeholder="Your Message" required></textarea>
                                 </div>
-                                <div id="formMessage" class="alert d-none mb-3"></div>
-                                <button type="submit" class="btn btn-send-message btn-lg w-100" id="submitBtn">Hantar Mesej</button>
+                                <button type="submit" class="btn btn-send-message btn-lg w-100">Send Message</button>
                             </form>
                         </div>
                     </div>
@@ -592,37 +390,36 @@
                         <i class="bi bi-printer-fill text-warning" style="font-size: 1.5rem;"></i>
                         <span class="ms-2 fw-bold text-white fs-5">Kilang Sublimation</span>
                     </a>
-                    <p class="small">Rakan kongsi yang dipercayai untuk perkhidmatan percetakan sublimation premium.</p>
-                    <a href="https://www.facebook.com/kilangsublimation.my" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>
-                    <a href="https://www.instagram.com/kilangsublimation.my" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
-                    <a href="https://wa.me/60192804490" target="_blank" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+                    <p class="small">Your trusted partner for premium sublimation printing services.</p>
+                    <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
                 </div>
 
                 <div class="col-md-2 mb-4">
-                    <h6 class="text-white fw-bold mb-3">Perkhidmatan</h6>
+                    <h6 class="text-white fw-bold mb-3">Services</h6>
                     <ul class="list-unstyled small">
-                        <li><a href="#services" class="footer-link">Percetakan Baju</a></li>
-                        <li><a href="#services" class="footer-link">Percetakan Sepanduk</a></li>
-                        <li><a href="#services" class="footer-link">Percetakan Lanyard</a></li>
-                        <li><a href="#services" class="footer-link">Perkhidmatan DTF</a></li>
-                        <li><a href="#about" class="footer-link">Reka Bentuk Kustom</a></li>
+                        <li><a href="#services" class="footer-link">Shirt Printing</a></li>
+                        <li><a href="#services" class="footer-link">Banner Printing</a></li>
+                        <li><a href="#services" class="footer-link">Lanyard Printing</a></li>
+                        <li><a href="#about" class="footer-link">Custom Design</a></li>
                     </ul>
                 </div>
 
                 <div class="col-md-2 mb-4">
-                    <h6 class="text-white fw-bold mb-3">Pautan Pantas</h6>
+                    <h6 class="text-white fw-bold mb-3">Quick Links</h6>
                     <ul class="list-unstyled small">
-                        <li><a href="#about" class="footer-link">Tentang Kami</a></li>
-                        <li><a href="#gallery" class="footer-link">Galeri</a></li>
-                        <li><a href="#contact" class="footer-link">Hubungi</a></li>
-                        <li><a href="#" class="footer-link">Soalan Lazim</a></li>
+                        <li><a href="#about" class="footer-link">About Us</a></li>
+                        <li><a href="#gallery" class="footer-link">Gallery</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                        <li><a href="#" class="footer-link">FAQ</a></li>
                     </ul>
                 </div>
 
                 <div class="col-md-4 mb-4 footer-contact">
-                    <h6 class="text-white fw-bold mb-3">Maklumat Hubungan</h6>
+                    <h6 class="text-white fw-bold mb-3">Contact Info</h6>
                     <ul class="list-unstyled small">
-                        <li><i class="bi bi-telephone-fill me-2 text-warning"></i><a href="tel:+60192804490">+60 19-280 4490 / +60 19-243 4490</a></li>
+                        <li><i class="bi bi-telephone-fill me-2 text-warning"></i><a href="tel:+60123456789">+60 12-345-6789</a></li>
                         <li><i class="bi bi-envelope-fill me-2 text-warning"></i><a href="mailto:Admin@kilangsublimation.com.my">Admin@kilangsublimation.com.my</a></li>
                         <li><i class="bi bi-geo-alt-fill me-2 text-warning"></i>LOT 2, INKUBATOR INDUSTRI DESA(IID), PEKAN AJIL 21800 AJIL TERENGGANU</li>
                     </ul>
@@ -631,16 +428,11 @@
             
             <hr class="text-white-50">
             <div class="text-center small pt-3">
-                &copy; 2024 Kilang Sublimation. Hak cipta terpelihara.
+                &copy; 2026 Kilang Sublimation. All rights reserved.
             </div>
         </div>
     </footer>
 
-    <!-- Floating Agent Button -->
-    <a href="https://www.kilangsublimation.com.my/auth/register" target="_blank" class="floating-agent-btn" id="agentBtn">
-        <i class="bi bi-person-badge"></i>
-        <span>Berminat Nak Jadi Agent?</span>
-    </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
@@ -675,53 +467,6 @@
                     }
                 });
             });
-
-            // Contact Form Submission
-            const contactForm = document.getElementById('contactForm');
-            const formMessage = document.getElementById('formMessage');
-            const submitBtn = document.getElementById('submitBtn');
-
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Get form values
-                    const name = document.getElementById('contactName').value;
-                    const email = document.getElementById('contactEmail').value;
-                    const service = document.getElementById('contactService').options[document.getElementById('contactService').selectedIndex].text;
-                    const message = document.getElementById('contactMessage').value;
-                    
-                    // Create email subject and body
-                    const subject = encodeURIComponent(`Pertanyaan dari ${name} - ${service}`);
-                    const body = encodeURIComponent(`Nama: ${name}\nE-mel: ${email}\nPerkhidmatan: ${service}\n\nMesej:\n${message}`);
-                    
-                    // Create mailto link
-                    const mailtoLink = `mailto:Admin@kilangsublimation.com.my?subject=${subject}&body=${body}`;
-                    
-                    // Disable submit button
-                    submitBtn.disabled = true;
-                    submitBtn.textContent = 'Membuka E-mel...';
-                    
-                    // Open email client
-                    window.location.href = mailtoLink;
-                    
-                    // Show success message
-                    setTimeout(() => {
-                        formMessage.className = 'alert alert-success';
-                        formMessage.textContent = 'E-mel anda akan dibuka. Sila hantar mesej melalui aplikasi e-mel anda.';
-                        formMessage.classList.remove('d-none');
-                        
-                        // Reset button
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'Hantar Mesej';
-                        
-                        // Hide message after 5 seconds
-                        setTimeout(() => {
-                            formMessage.classList.add('d-none');
-                        }, 5000);
-                    }, 500);
-                });
-            }
         });
     </script>
 </body>

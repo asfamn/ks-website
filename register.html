@@ -146,6 +146,7 @@
       border: none;
       position:relative;
       animation: fadeInScale 0.8s ease-out both;
+      margin-bottom: 24px;
     }
     /* “double ring” look */
     .logo img{
@@ -391,17 +392,17 @@
           <div class="subtitle">Kilang Sublimation</div>
 
           <form class="form" onsubmit="event.preventDefault();">
+            <input class="input" type="text" placeholder="Nama Penuh" autocomplete="name" />
             <input class="input" type="text" placeholder="Nama Pengguna" autocomplete="username" />
-            <input class="input" type="password" placeholder="Kata Laluan" autocomplete="current-password" />
+            <input class="input" type="email" placeholder="Email" autocomplete="email" />
+            <input class="input" type="tel" placeholder="Nombor Telefon" autocomplete="tel" />
+            <input class="input" type="password" placeholder="Kata Laluan" autocomplete="new-password" />
+            <input class="input" type="password" placeholder="Pengesahan Kata Laluan" autocomplete="new-password" />
 
-            <div class="row">
-              <a class="link" href="#">Lupa Kata Laluan?</a>
-            </div>
-
-            <button class="btn" type="submit">Log Masuk</button>
+            <button class="btn" type="submit">Daftar</button>
 
             <div class="foot">
-              Bukan Ahli? <a href="#">Daftar</a>
+              Sudah Ahli? <a href="index.html">Log Masuk</a>
             </div>
           </form>
         </section>
